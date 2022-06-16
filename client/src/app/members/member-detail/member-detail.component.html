@@ -32,13 +32,13 @@
     <div class="col-8">
         <tabset class="member-tabset">
             <tab heading="About {{member.knownAs}}">
-                <h4>Description</h4>
+                <h4 [hidden]="member?.introduction?.length <= 0">Description</h4>
                 <p>{{member.introduction}}</p>
-                <h4>Looking for</h4>
+                <h4 [hidden]="member?.lookingFor?.length <= 0">Looking for</h4>
                 <p>{{member.lookingFor}}</p>
             </tab>
             <tab heading="Interests">
-                <h4>Interests</h4>
+                <h4 [hidden]="member?.interests?.length <= 0">Interests</h4>
                 <p>{{member.interests}}</p>
             </tab>
             <tab heading="Photos">
