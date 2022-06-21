@@ -8,6 +8,7 @@ namespace API.Entities
         public int ID { get; set; }
         public string URL { get; set; }
         public bool IsMain { get; set; }
+        public bool IsApproved { get; set;}
         public string PublicID { get; set; }
         public AppUser AppUser { get; set; }
         public int AppUserID { get; set; }

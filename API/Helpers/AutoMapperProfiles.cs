@@ -25,6 +25,7 @@ namespace API.Helpers
                     src.Sender.Photos.FirstOrDefault(x => x.IsMain).URL))
                 .ForMember(dest => dest.RecipientPhotoURL, opt => opt.MapFrom(src => 
                     src.Recipient.Photos.FirstOrDefault(x => x.IsMain).URL));
+            
         }
     }
 }
